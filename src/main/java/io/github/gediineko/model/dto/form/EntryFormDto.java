@@ -2,8 +2,6 @@ package io.github.gediineko.model.dto.form;
 
 import io.github.gediineko.model.base.dto.BaseWebDto;
 import io.github.gediineko.model.entity.Entry;
-import io.github.gediineko.model.ref.Category;
-import io.github.gediineko.model.ref.Recurrence;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 /**
