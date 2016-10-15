@@ -1,9 +1,8 @@
 package io.github.gediineko.model.base.entity;
 
-import io.github.gediineko.model.ref.Category;
-import io.github.gediineko.model.ref.Recurrence;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.springframework.data.annotation.CreatedBy;
@@ -22,8 +21,10 @@ import java.time.LocalDateTime;
 @MappedSuperclass
 @Getter
 @Setter
+@ToString
 @EntityListeners(AuditingEntityListener.class)
 public abstract class BaseEntity implements Persistable<Long> {
+
     private static final long serialVersionUID = 6135390632608000517L;
 
     @Id
