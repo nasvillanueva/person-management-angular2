@@ -32,9 +32,7 @@
         <jdbc.url>jdbc:postgresql://localhost/persondb</jdbc.url>
         <jdbc.username>postgres</jdbc.username>
         <jdbc.password>postgres</jdbc.password>
-        <jdbc.driver>postgres</jdbc.driver>
 
-        <hibernate.hbm2ddl>create</hibernate.hbm2ddl>
 
     </properties>
 
