@@ -31,8 +31,12 @@ module.exports = {
         exclude: [helpers.root('src/public/index.html')]
       },
       {
-        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-        loader: 'file?name=assets/[name].[hash].[ext]'
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url?limit=10000&mimetype=application/font-woff!file?name=fonts/[name].[ext]'
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file?name=/fonts/[name].[ext]'
       },
       {
         test: /\.css$/,

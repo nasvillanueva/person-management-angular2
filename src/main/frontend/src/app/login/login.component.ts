@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {LoginService} from "../shared/services/login.service";
 
 @Component({
     selector: 'my-login',
@@ -8,6 +9,25 @@ import {Component} from '@angular/core';
     ]
 })
 export class LoginComponent {
-    constructor() {
+    login: LoginForm = {
+        username: "",
+        password: ""
+    };
+
+    errorMessage: String;
+
+    constructor(private loginService: LoginService) {
     }
+
+    submitLogin(){
+        this.loginService.login(this.login)
+            .subscribe(resp => console.log(resp), err => {
+                this.errorMessage = err._body;
+            });
+    }
+}
+
+export class LoginForm {
+    username: string;
+    password: string;
 }

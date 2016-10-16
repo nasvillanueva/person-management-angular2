@@ -1,4 +1,2 @@
-body {
-    background: #0147A7;
-    color: #fff;
-}
+@import url('../../../node_modules/bootstrap/dist/css/bootstrap.css');
+@import url('../../../node_modules/font-awesome/css/font-awesome.css');
