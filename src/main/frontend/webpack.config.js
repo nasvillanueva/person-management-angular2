@@ -72,7 +72,7 @@ webpackConfig.module.rules = [
   {
     test: /\.less$/, include: root('src', 'app'), loader: ExtractTextPlugin.extract({
     fallBackLoader: 'style-loader',
-    loader: ['css', 'less']})
+    loader: ['css', 'postcss','less']})
   },
   // support for .html as raw text
   {test: /\.html$/, loader: 'raw', exclude: root('src', 'public')}

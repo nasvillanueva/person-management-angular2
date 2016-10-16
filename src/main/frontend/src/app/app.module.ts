@@ -5,6 +5,7 @@ import {FormsModule} from '@angular/forms';
 import {AppComponent} from './app.component';
 import {AdminService} from './shared';
 import {routing} from './app.routing';
+import {LoginComponent} from './login/login.component';
 
 @NgModule({
     imports: [
@@ -14,7 +15,8 @@ import {routing} from './app.routing';
         routing
     ],
     declarations: [
-        AppComponent
+        AppComponent,
+        LoginComponent
     ],
     providers: [
         AdminService

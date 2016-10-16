@@ -26,3 +26,4 @@ node
 node_modules
 src/main/frontend/etc
 npm-debug.log
+typings
