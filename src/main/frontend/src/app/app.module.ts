@@ -1,11 +1,11 @@
-import {NgModule, ApplicationRef} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {HttpModule} from '@angular/http';
-import {FormsModule} from '@angular/forms';
+import {NgModule} from '@angular/core';
+import {BrowserModule}  from '@angular/platform-browser';
 import {AppComponent} from './app.component';
-import {AdminService} from './shared';
-import {routing} from './app.routing';
-import {LoginComponent} from './login/login.component';
+import {FormsModule} from "@angular/forms";
+import {HttpModule} from "@angular/http";
+import {routing} from "./app.routing";
+import {LoginComponent} from "./login/login.component";
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 
 @NgModule({
     imports: [
@@ -14,16 +14,14 @@ import {LoginComponent} from './login/login.component';
         FormsModule,
         routing
     ],
+    providers: [
+        {provide: LocationStrategy, useClass: HashLocationStrategy}
+    ],
     declarations: [
         AppComponent,
         LoginComponent
     ],
-    providers: [
-        AdminService
-    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
-    constructor(public appRef: ApplicationRef) {
-    }
 }

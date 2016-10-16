@@ -1,12 +1,10 @@
-import {Component} from '@angular/core';
-import '../style/app.less';
-
+import { Component } from '@angular/core';
+import '../public/css/styles.css';
 @Component({
-    selector: 'my-app', // <my-app></my-app>
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.less'.toString()],
+    selector: 'my-app',
+    template: require('./app.component.html'),
+    styles: [
+        require('./app.component.less').toString()
+    ]
 })
-export class AppComponent {
-    constructor() {
-    }
-}
+export class AppComponent { }

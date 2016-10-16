@@ -32,7 +32,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private static final String[] PERMIT_ALL = {
-            "/index.html", "/", "/js/**", "/css/**", "/images/**",
+            "/**.html", "/", "/js/**", "/css/**", "/images/**",
             "/static/**", "/public/**",
             "/api/login", "/api/logout", "/favicon.ico"
     };
